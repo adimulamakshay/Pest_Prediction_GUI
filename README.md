@@ -55,6 +55,8 @@ This project is designed to identify and classify different types of pests from 
 * **Train Model:** Trains the model on the training dataset with validation on the validation dataset for a specified number of epochs.
 * **Visualize Training Results:** Plots training and validation loss and accuracy curves to monitor model performance.
 * **Save Model:** Saves the trained model as `model_inception.h5`.
+  ![image](https://github.com/user-attachments/assets/f047caaf-78d0-44b4-99e3-18dbb4163099)
+  ![image](https://github.com/user-attachments/assets/b2c07ada-fcf4-4c36-a1a7-78d8aa4f4bb5)
 
 1. **Install Dependencies:**
    ```bash
