@@ -51,4 +51,3 @@ This project is designed to identify and classify different types of pests from 
     * Expanding the pest information database.
     * More comprehensive GUI elements for user interaction.
 
-I hope this README provides a clear understanding of your project. If you have the `pest_info.py` file, you can include it in the project structure description and mention its functionality in the Using the GUI section.
