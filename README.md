@@ -4,8 +4,12 @@ This project is designed to identify and classify different types of pests from 
 
 **Project Structure:**
 
-* `Pest_Model.py`: Main Python script containing the graphical user interface (GUI) and image classification logic.
+* `leaf_disease_detection.ipynb`: Jupyter Notebook containing the code for training and evaluating the model.
+* `dataset/`: Directory containing the training and validation image datasets. (Assuming this directory structure)
+    * `train/`: Subdirectory containing images of tomato leaves with different diseases (organized into class folders).
+    * `val/`: Subdirectory containing validation images for model evaluation.
 * `model_inception.h5`: The saved TensorFlow model file (trained InceptionV3 model for pest classification).
+* `Pest_Model.py`: Main Python script containing the graphical user interface (GUI) and image classification logic.
 
 **Dependencies:**
 
@@ -16,6 +20,41 @@ This project is designed to identify and classify different types of pests from 
 * numpy
 
 **Running the Project:**
+
+1. **Mount Google Drive:**
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   !pip install tensorflow keras Pillow matplotlib numpy
+   ```
+
+3. **Navigate to the Project Directory:**
+   ```python
+   import os
+   os.chdir('/content/drive/MyDrive/YourProjectPath') # Replace with your actual project directory
+   ```
+
+4. **Run the Jupyter Notebook:**
+   * Open the `leaf_disease_detection.ipynb` notebook in Google Colab or a local Jupyter environment.
+   * Execute the cells in the notebook sequentially.
+
+**Code Overview:**
+
+* **Import Libraries:** Imports necessary libraries for TensorFlow, Keras, image processing, and data manipulation.
+* **Set GPU Memory Allocation:** Configures GPU memory usage for training (optional, adjust as needed).
+* **Load Pre-trained Model:** Loads the InceptionV3 model pre-trained on ImageNet, excluding the top classification layers.
+* **Freeze Pre-trained Layers:** Freezes the pre-trained layers of InceptionV3 to prevent them from being updated during training.
+* **Add Custom Layers:** Adds a new classification layer with the number of outputs matching the number of disease classes in your dataset.
+* **Compile Model:** Defines the loss function (categorical cross-entropy), optimizer (Adam), and metrics (accuracy) for model training.
+* **Data Augmentation:** Creates ImageDataGenerator objects for training and validation sets, applying random transformations (shear, zoom, horizontal flip) for data augmentation.
+* **Load Data:** Loads training and validation image datasets using flow_from_directory with appropriate target sizes and batch sizes.
+* **Train Model:** Trains the model on the training dataset with validation on the validation dataset for a specified number of epochs.
+* **Visualize Training Results:** Plots training and validation loss and accuracy curves to monitor model performance.
+* **Save Model:** Saves the trained model as `model_inception.h5`.
 
 1. **Install Dependencies:**
    ```bash
