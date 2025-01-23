@@ -6,8 +6,6 @@ This project is designed to identify and classify different types of pests from 
 
 * `Pest_Model.py`: Main Python script containing the graphical user interface (GUI) and image classification logic.
 * `model_inception.h5`: The saved TensorFlow model file (trained InceptionV3 model for pest classification).
-* `labels.txt`: A text file containing labels (pest categories) corresponding to the model's output classes. (Assuming this file exists)
-* `pest_info.py` (Optional): A Python script containing a dictionary mapping pest categories to information about control methods (pesticides and techniques).
 
 **Dependencies:**
 
