@@ -1,6 +1,6 @@
 # **Pest Prediction GUI**
 
-This project is designed to identify and classify different types of pests from images. It utilizes a pre-trained InceptionV3 model for image classification and outputs the top 5 most probable pest categories along with their confidence scores.
+This project is designed to identify and classify different types of pests from images. It utilizes a pre-trained InceptionV3 model for image classification and outputs the top 5 most probable pest categories along with their confidence scores. This Jupyter Notebook implements a deep learning model for classifying tomato leaf diseases from images. It leverages transfer learning with a pre-trained InceptionV3 model and fine-tunes it on a custom dataset.
 
 **Project Structure:**
 
@@ -37,6 +37,7 @@ This project is designed to identify and classify different types of pests from 
    import os
    os.chdir('/content/drive/MyDrive/YourProjectPath') # Replace with your actual project directory
    ```
+*Make sure to replace `'/content/drive/MyDrive/YourProjectPath'` with the actual path to your project directory in Google Colab.
 
 4. **Run the Jupyter Notebook:**
    * Open the `leaf_disease_detection.ipynb` notebook in Google Colab or a local Jupyter environment.
@@ -89,4 +90,6 @@ This project is designed to identify and classify different types of pests from 
     * Training a custom model on a pest image dataset.
     * Expanding the pest information database.
     * More comprehensive GUI elements for user interaction.
-
+    * Training with a larger and more balanced dataset.
+    * Experimenting with different hyperparameters (learning rate, epochs, etc.) for potentially better performance.
+    * Implementing a custom image pre-processing pipeline for improved image normalization or noise reduction.
